@@ -209,6 +209,7 @@ footer {
   align-items: center;
   margin-left: auto;
   gap: 60px;
+  z-index: 10;
 }
 .header .menu__list {
   display: flex;
@@ -325,16 +326,44 @@ footer {
   opacity: 0;
 }
 
-.example {
-  text-align: center;
-  color: #212529;
+.first-screen {
+  position: relative;
+  background-color: #043873;
+  overflow-y: hidden;
 }
-.example figure {
-  margin: 48px auto 24px;
-  width: 100%;
-  max-width: 280px;
-  background: #FFFFFF;
-  padding: 12px;
+.first-screen > .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  z-index: 1;
+}
+.first-screen-content__title {
+  margin-bottom: 24px;
+  color: #fff;
+}
+.first-screen__description {
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+.first-screen__img {
+  z-index: 1;
+}
+.first-screen .btn {
+  z-index: 1;
+}
+.first-screen::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2652px;
+  height: 601px;
+  background-image: url("./assets/img/fs-stroke-bg.svg");
+  transform: translate(-45%, -50%);
 }
 
 .footer {
@@ -559,6 +588,24 @@ footer {
   }
 }
 @media screen and (max-width: 1024px) {
+  .first-screen > .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 140px 20px 100px;
+  }
+  .first-screen-content__title {
+    font-size: 54px;
+  }
+  .first-screen .btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-bottom: 100px;
+  }
+  .first-screen::before {
+    background-image: url("./assets/img/fs-stroke-md.svg");
+    transform: translate(-30%, -81%);
+  }
   .footer-row {
     flex-direction: column;
     gap: 100px;
@@ -617,6 +664,16 @@ footer {
     align-items: center;
     justify-content: flex-start;
     top: 65px;
+  }
+  .first-screen-content__title {
+    font-size: 36px;
+  }
+  .first-screen > .container {
+    padding: 80px 16px;
+  }
+  .first-screen::before {
+    background-image: url("./assets/img/fs-stroke-sm.svg");
+    transform: translate(-22%, -85%);
   }
   .footer-row, .footer-col, .footer-nav {
     align-items: center;
