@@ -970,6 +970,9 @@ footer {
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  .extension-content {
+    max-width: 288px;
+  }
   .extension-content .extension-title {
     font-size: 36px;
   }
