@@ -1,3 +1,4 @@
+
   const burger = document.querySelector("#btn-burger");
   const mobileContainer = document.querySelector("#mobile-container");
   const body = document.querySelector("#body");
@@ -41,5 +42,35 @@
       }
   });
 
+
+  const swiperPlan = new Swiper('.swiper-plan', {
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    allowTouchMove: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+      // від 767px
+      767: {
+        slidesPerView: 'auto', 
+        centeredSlides: true,
+        loop: false,
+        allowTouchMove: true,
+        spaceBetween: 32,
+      },
+      // від 1024px
+      1024: {
+        initialSlide: 1,
+        slidesPerView: 3,
+        spaceBetween: 32,
+        loop: false,
+        allowTouchMove: true,
+      }
+    }
+  });
+
   
-    
