@@ -49,6 +49,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   line-height: 1;
   text-rendering: optimizeSpeed;
@@ -57,6 +58,7 @@ body {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  z-index: -10;
 }
 
 button {
@@ -129,6 +131,16 @@ h5 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+main {
+  position: relative;
+  z-index: -10;
+}
+
+section > .container {
+  padding-top: 140px;
+  padding-bottom: 140px;
 }
 
 .container {
@@ -414,6 +426,7 @@ footer {
   max-width: 680px;
   z-index: -1;
   width: 100%;
+  color: #FFE492;
 }
 .management-description {
   position: relative;
@@ -447,6 +460,7 @@ footer {
   max-width: 425px;
   z-index: -1;
   width: 100%;
+  color: #FFE492;
 }
 .management-work-title {
   margin-bottom: 24px;
@@ -490,6 +504,7 @@ footer {
   top: -10px;
   left: 300px;
   z-index: -1;
+  color: #FFE492;
 }
 .extension-content .extension-description {
   font-size: 18px;
@@ -517,6 +532,7 @@ footer {
   top: 70px;
   left: -10px;
   z-index: -1;
+  color: #FFE492;
 }
 .customise-content .customise-description {
   color: #212529;
@@ -548,6 +564,7 @@ footer {
   max-width: 550px;
   width: 100%;
   z-index: -1;
+  color: #FFE492;
 }
 .plan > .container .plan-content .plan-description {
   color: #212529;
@@ -660,6 +677,58 @@ footer {
 }
 .plan > .container .swiper-pagination-bullet-active {
   background: #043873;
+}
+
+.work-everywhere {
+  position: relative;
+  z-index: -3;
+  background: #043873;
+}
+.work-everywhere::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -260px;
+  width: 647px;
+  height: 657px;
+  background-image: url("./assets/img/work-everywhere-bg.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.work-everywhere > .container {
+  overflow-x: hidden;
+}
+.work-everywhere-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1064px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+.work-everywhere__title {
+  position: relative;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.work-everywhere__title-line {
+  position: absolute;
+  top: -14px;
+  right: -148px;
+  max-width: 400px;
+  width: 100%;
+  z-index: -1;
+  color: #4F9CF9;
+}
+.work-everywhere__description {
+  position: relative;
+  max-width: 1064px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .footer {
@@ -948,6 +1017,18 @@ footer {
   .plan > .container .plan-content .plan-title__line {
     top: -20px;
   }
+  .work-everywhere-content {
+    align-items: flex-start;
+    max-width: 650px;
+    margin: 0;
+  }
+  .work-everywhere__title {
+    font-size: 64px;
+  }
+  .work-everywhere__title-line {
+    top: 60px;
+    right: -100px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .first-screen > .container {
@@ -1080,6 +1161,27 @@ footer {
   .plan > .container .swiper-slide .plan-price__description, .plan > .container .swiper-slide .plan-price__point, .plan > .container .swiper-slide-active .plan-price__description, .plan > .container .swiper-slide-active .plan-price__point {
     font-size: 16px;
   }
+  .work-everywhere::before {
+    top: -50px;
+    left: -390px;
+  }
+  .work-everywhere-content {
+    max-width: 604px;
+  }
+  .work-everywhere-content > button {
+    font-size: 16px;
+  }
+  .work-everywhere__title {
+    font-size: 54px;
+  }
+  .work-everywhere__title-line {
+    top: 40px;
+    right: 310px;
+    max-width: 300px;
+  }
+  .work-everywhere__description {
+    text-align: start;
+  }
   .footer-row {
     flex-direction: column;
     gap: 100px;
@@ -1126,6 +1228,9 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
   .header .header-buttons {
     display: none;
   }
@@ -1182,6 +1287,12 @@ footer {
     max-width: 472px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .work-everywhere-content {
+    max-width: 530px;
+  }
+  .work-everywhere__title-line {
+    right: -80px;
   }
   .footer-row, .footer-col, .footer-nav {
     align-items: center;
@@ -1293,6 +1404,27 @@ footer {
   }
   .plan > .container .swiper-slide .plan-price__btn, .plan > .container .swiper-slide-active .plan-price__btn {
     font-size: 18px;
+  }
+  .work-everywhere::before {
+    display: none;
+  }
+  .work-everywhere > .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .work-everywhere-content {
+    margin: 0 auto;
+    align-items: center;
+    max-width: 288px;
+  }
+  .work-everywhere-content > button {
+    font-size: 18px;
+  }
+  .work-everywhere__title {
+    font-size: 36px;
+  }
+  .work-everywhere__title-line {
+    right: -45px;
   }
   .footer-logo img {
     content: url("./assets/img/logo.svg");
