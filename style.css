@@ -731,6 +731,42 @@ footer {
   margin-bottom: 60px;
 }
 
+.your-data-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+.your-data-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+}
+.your-data-title {
+  margin-bottom: 24px;
+  position: relative;
+}
+.your-data-title__line {
+  position: absolute;
+  top: -10px;
+  right: -165px;
+  max-width: 500px;
+  width: 100%;
+  color: #FFE492;
+  z-index: -1;
+}
+.your-data-description {
+  color: black;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 60px;
+}
+.your-data-img {
+  max-width: 681px;
+  width: 100%;
+}
+
 .footer {
   margin-top: auto;
   background-color: #043873;
@@ -921,6 +957,9 @@ footer {
   .plan > .container .plan-price {
     max-width: 438px;
   }
+  .your-data-text {
+    max-width: 695px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .header > .container {
@@ -1028,6 +1067,15 @@ footer {
   .work-everywhere__title-line {
     top: 60px;
     right: -100px;
+  }
+  .your-data-text {
+    max-width: 526px;
+  }
+  .your-data-title {
+    font-size: 64px;
+  }
+  .your-data-title__line {
+    top: -15px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1182,6 +1230,31 @@ footer {
   .work-everywhere__description {
     text-align: start;
   }
+  .your-data-text {
+    max-width: 728px;
+    align-items: center;
+  }
+  .your-data-text > button {
+    font-size: 16px;
+  }
+  .your-data-img {
+    margin-bottom: 100px;
+  }
+  .your-data-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .your-data-title {
+    font-size: 54px;
+  }
+  .your-data-title__line {
+    top: -26px;
+    right: -145px;
+  }
+  .your-data-description {
+    text-align: center;
+  }
   .footer-row {
     flex-direction: column;
     gap: 100px;
@@ -1293,6 +1366,10 @@ footer {
   }
   .work-everywhere__title-line {
     right: -80px;
+  }
+  .your-data > .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .footer-row, .footer-col, .footer-nav {
     align-items: center;
@@ -1425,6 +1502,23 @@ footer {
   }
   .work-everywhere__title-line {
     right: -45px;
+  }
+  .your-data-text {
+    max-width: 288px;
+  }
+  .your-data-text > button {
+    font-size: 18px;
+  }
+  .your-data-img {
+    max-width: 288px;
+  }
+  .your-data-title {
+    font-size: 36px;
+  }
+  .your-data-title__line {
+    top: -45px;
+    right: -95px;
+    max-width: 300px;
   }
   .footer-logo img {
     content: url("./assets/img/logo.svg");
