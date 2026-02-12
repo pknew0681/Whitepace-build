@@ -955,6 +955,53 @@ footer {
   background: #043873;
 }
 
+.try {
+  background-color: #043873;
+}
+.try > .container {
+  padding-bottom: 32px;
+}
+.try-content {
+  max-width: 608px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.try-content__title {
+  color: white;
+  margin-bottom: 24px;
+}
+.try-content__description {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.try-content > button {
+  margin-bottom: 40px;
+}
+.try-content__link {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.try-content__link > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.try-content-icons {
+  max-width: 260px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.try-content-icons > img {
+  width: 60px;
+  height: 60px;
+}
+
 .footer {
   margin-top: auto;
   background-color: #043873;
@@ -1507,6 +1554,9 @@ footer {
   .clients-say .swiper-slide, .clients-say .swiper-slide-active, .clients-say .clients-say-comment {
     max-width: 340px;
   }
+  .try-content__title {
+    font-size: 64px;
+  }
   .footer-row {
     flex-direction: column;
     gap: 100px;
@@ -1650,6 +1700,18 @@ footer {
   }
   .clients-say .swiper-slide-active {
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  }
+  .try-content {
+    margin: 0;
+    margin-right: auto;
+    align-items: flex-start;
+    text-align: start;
+  }
+  .try-content__title {
+    font-size: 54px;
+  }
+  .try-content__description {
+    max-width: 550px;
   }
   .footer-row, .footer-col, .footer-nav {
     align-items: center;
@@ -1861,6 +1923,29 @@ footer {
   }
   .clients-say .swiper-slide, .clients-say .clients-say-comment {
     max-width: 288px;
+  }
+  .try > .container {
+    padding-top: 100px;
+  }
+  .try-content__title {
+    font-size: 36px;
+  }
+  .try-content__description {
+    font-size: 18px;
+    max-width: 288px;
+  }
+  .try-content__link {
+    font-size: 18px;
+  }
+  .try-content > button {
+    font-size: 16px;
+  }
+  .try-content-icons {
+    max-width: 185px;
+  }
+  .try-content-icons > img {
+    width: 35px;
+    height: 36px;
   }
   .footer-logo img {
     content: url("./assets/img/logo.svg");
