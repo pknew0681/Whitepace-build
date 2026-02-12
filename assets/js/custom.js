@@ -5,7 +5,7 @@
   const langSelect = document.querySelector('.lang-select');
   const currentLangText = langSelect.querySelector('[data-current-lang] span');
   const langItems = langSelect.querySelectorAll('.lang-select__item');
-  
+  const decorativeUse = document.querySelectorAll('.decorative-use');
 
   burger.addEventListener('click', ()=>{
     burger.classList.toggle('active');
@@ -50,6 +50,36 @@
     allowTouchMove: true,
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+      // від 767px
+      767: {
+        slidesPerView: 'auto', 
+        centeredSlides: true,
+        loop: false,
+        allowTouchMove: true,
+        spaceBetween: 32,
+      },
+      // від 1024px
+      1024: {
+        initialSlide: 1,
+        slidesPerView: 3,
+        spaceBetween: 32,
+        loop: false,
+        allowTouchMove: true,
+      }
+    }
+  });
+
+  const swiperClientsSay = new Swiper('.clients-say-swiper', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    allowTouchMove: true,
+    spaceBetween: 32,
+    pagination: {
+      el: '.clients-say-pagination',
       clickable: true,
     },
 
